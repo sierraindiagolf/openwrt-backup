@@ -11,7 +11,15 @@ Clone this repository on your target device.
 git clone https://github.com/sierraindiagolf/openwrt-backup.git
 ~~~
 
-Run `setup.sh`
+Download via wget
+~~~
+wget -O backup.sh https://raw.githubusercontent.com/sierraindiagolf/openwrt-backup/refs/heads/mai
+n/backup.sh
+wget -O setup.sh https://raw.githubusercontent.com/sierraindiagolf/openwrt-backup/refs/heads/main/setup.sh
+~~~
+
+
+Run setup
 
 ~~~
 chmod +x setup.sh
