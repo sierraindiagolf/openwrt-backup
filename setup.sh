@@ -115,5 +115,5 @@ set envelope_from=yes
 " > /root/.muttrc
 
 currentdir=$(pwd)
-echo "$frequency $currentdir/backup.sh --to $to --hostname $system_hostname" >> /etc/crontabs/root
+echo "$frequency $currentdir/backup.sh --to $to --hostname $system_hostname >> $currentdir/out.txt" >> /etc/crontabs/root
 service cron restart

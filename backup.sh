@@ -39,11 +39,11 @@ elif [[ -z $to ]]; then
 fi
 
 echo "Starting backup process..."
-sysupgrade -c -k -v --create-backup backup.tar.gz || die "Failed to create backup"
+currentdir=$(pwd)
+sysupgrade -c -k -v --create-backup $currentdir/backup.tar.gz
 echo "Backup created: backup.tar.gz
-Sending email to $to..."
-echo -e "Backup from $hostname generated at $(date '+%Y-%m-%d %H:%M:%S')" | mutt -s "Backup from $hostname" -a /root/backup/backup.tar.gz -- $to
+Sending email to: $to"
+echo -e "Backup from $hostname generated at $(date '+%Y-%m-%d %H:%M:%S')" | mutt -s "Backup from $hostname" -a $currentdir/backup.tar.gz -- $to
 echo "Mail sent successfully."
 echo "Cleaning up..."
-rm -f /root/backup/backup.tar.gz
-echo "Backup process completed."
+rm /root/backup/backup.tar.gz
