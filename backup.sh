@@ -39,8 +39,8 @@ elif [[ -z $to ]]; then
 fi
 
 echo "Starting backup process..."
-sysupgrade -c -k -v --create-backup backup.tgz
-echo "Backup created: backup.tgz
+sysupgrade -c -k -v --create-backup backup.tar.gz
+echo "Backup created: backup.tar.gz"
 Sending email to $to..."
 echo -e "Backup from $hostname generated at $(date '+%Y-%m-%d %H:%M:%S')" | mutt -s "Backup from $hostname" -a /root/backup/backup.tar.gz -- $to
 echo "Mail sent successfully."
