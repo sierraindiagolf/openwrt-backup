@@ -42,7 +42,7 @@ echo "Starting backup process..."
 sysupgrade -c -k -v --create-backup backup.tgz
 echo "Backup created: backup.tgz
 Sending email to $to..."
-echo -e "Backup from $hostname generated at $(date '+%Y-%m-%d %H:%M:%S')" | mutt -s "Backup from $host" -a /root/backup/backup.tar.gz -- $to
+echo -e "Backup from $hostname generated at $(date '+%Y-%m-%d %H:%M:%S')" | mutt -s "Backup from $hostname" -a /root/backup/backup.tar.gz -- $to
 echo "Mail sent successfully."
 echo "Cleaning up..."
 rm -f /root/backup/backup.tar.gz
