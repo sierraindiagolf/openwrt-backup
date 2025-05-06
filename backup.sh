@@ -44,3 +44,6 @@ echo "Backup created: backup.tgz
 Sending email to $to..."
 echo -e "Backup from $hostname generated at $(date '+%Y-%m-%d %H:%M:%S')" | mutt -s "Backup from $host" -a /root/backup/backup.tar.gz -- $to
 echo "Mail sent successfully."
+echo "Cleaning up..."
+rm -f /root/backup/backup.tar.gz
+echo "Backup process completed."
