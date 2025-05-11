@@ -13,8 +13,7 @@ git clone https://github.com/sierraindiagolf/openwrt-backup.git
 
 Download via wget
 ~~~
-wget -O backup.sh https://raw.githubusercontent.com/sierraindiagolf/openwrt-backup/refs/heads/mai
-n/backup.sh
+wget -O backup.sh https://raw.githubusercontent.com/sierraindiagolf/openwrt-backup/refs/heads/main/backup.sh
 wget -O setup.sh https://raw.githubusercontent.com/sierraindiagolf/openwrt-backup/refs/heads/main/setup.sh
 ~~~
 
